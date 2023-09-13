@@ -5,20 +5,20 @@ const mongoose = require('mongoose')
 
 // CONFIGURATION
 require('dotenv').config()
-// const PORT = process.env.PORT
+const PORT = process.env.PORT
 const app = express()
 mongoose
-  .connect("mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/")
-  .then(() => { console.log('connected to mongo: ', "mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/") })
+  .connect(process.env.MONGO_URI)
+  .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI) })
 
 
 // MIDDLEWARE
-app.use(methodOverride('_method'))
-app.use(express.static('public'))
-app.use(express.urlencoded({extended: true}))
-app.set('views', __dirname + '/views')
-app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
+// app.use(methodOverride('_method'))
+// app.use(express.static('public'))
+// app.use(express.urlencoded({extended: true}))
+// app.set('views', __dirname + '/views')
+// app.set('view engine', 'jsx')
+// app.engine('jsx', require('express-react-views').createEngine())
 
 // ROUTES
 app.get('/', (req, res) => {
@@ -39,8 +39,8 @@ app.get('*', (req, res) => {
 })
 
 // LISTEN
-app.listen(3000, () => {
-  console.log('listening on port', 3000);
+app.listen(PORT, () => {
+  console.log('listening on port', PORT);
 })
 
 module.exports = app
