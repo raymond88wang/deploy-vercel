@@ -1,15 +1,15 @@
 // DEPENDENCIES
 const express = require('express')
-// const methodOverride = require('method-override')
-// const mongoose = require('mongoose')
+const methodOverride = require('method-override')
+const mongoose = require('mongoose')
 
 // CONFIGURATION
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
-// mongoose
-//   .connect("mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/")
-//   .then(() => { console.log('connected to mongo: ', "mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/") })
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI) })
 
 
 // MIDDLEWARE
