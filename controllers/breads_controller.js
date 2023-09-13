@@ -26,7 +26,7 @@ breads.get('/new', (req, res) => {
         .find()
         .then(foundBakers => {
             res.render(
-                'New',
+                'new',
                 {
                     bakers: foundBakers
                 })
