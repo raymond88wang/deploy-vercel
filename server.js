@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const express = require('express')
-const methodOverride = require('method-override')
+// const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 
 // CONFIGURATION
@@ -25,18 +25,18 @@ app.get('/', (req, res) => {
   res.send('Welcome to an Awesome App about Breads')
 })
   
-// Breads
-const breadsController = require('./controllers/breads_controller.js')
-app.use('/breads', breadsController)
+// // Breads
+// const breadsController = require('./controllers/breads_controller.js')
+// app.use('/breads', breadsController)
 
-// Bakers
-const bakersController = require('./controllers/bakers_controller.js')
-app.use('/bakers', bakersController)
+// // Bakers
+// const bakersController = require('./controllers/bakers_controller.js')
+// app.use('/bakers', bakersController)
 
-// 404 Page
-app.get('*', (req, res) => {
-  res.render('NotFound')
-})
+// // 404 Page
+// app.get('*', (req, res) => {
+//   res.render('NotFound')
+// })
 
 // LISTEN
 app.listen(PORT, () => {
