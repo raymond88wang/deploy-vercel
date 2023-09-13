@@ -46,7 +46,7 @@ breads.get('/:id', (req, res) => {
             .populate("baker")
             .then(bread => {
                 res.render(
-                    'Show',
+                    'show',
                     {
                         bread: bread,
                         id: req.params.id
@@ -54,10 +54,10 @@ breads.get('/:id', (req, res) => {
             })
             .catch(err => {
                 console.log(err)
-                res.render('NotFound')
+                res.render('notFound')
             })
     } else {
-        res.render('NotFound')
+        res.render('notFound')
     }
     //res.send(Bread[req.params.arrayIndex])
 })
@@ -92,7 +92,7 @@ breads.delete('/:id', async (req, res) => {
                 res.status(303).redirect('/breads')
             })
     } else {
-        res.render('NotFound')
+        res.render('notFound')
     }
 })
 
@@ -114,7 +114,7 @@ breads.get('/:id/edit', (req, res) => {
                             })
                     })
             } else {
-                res.render('NotFound')
+                res.render('notFound')
             }
         })
 })
@@ -135,7 +135,7 @@ breads.put('/:id', (req, res) => {
                   res.redirect(`/breads/${req.params.id}`)
               })
     } else {
-        res.render('NotFound')
+        res.render('notFound')
     }
 })
 
