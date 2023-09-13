@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const express = require('express')
-const methodOverride = require('method-override')
+// const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 
 // CONFIGURATION
@@ -13,7 +13,7 @@ mongoose
 
 
 // MIDDLEWARE
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.set('views', __dirname + '/views')
@@ -43,4 +43,4 @@ app.listen(3000, () => {
   console.log('listening on port', 3000);
 })
 
-module.exports = app
+// module.exports = app
