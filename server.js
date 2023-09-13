@@ -7,9 +7,9 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI) })
+// mongoose
+//   .connect(process.env.MONGO_URI)
+//   .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI) })
 
 
 // MIDDLEWARE
