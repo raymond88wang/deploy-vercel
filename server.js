@@ -2,6 +2,7 @@
 const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+var path = require('path')
 
 // CONFIGURATION
 require('dotenv').config()
@@ -16,7 +17,7 @@ mongoose
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
-app.set('views', __dirname + '/views')
+app.set('views', path.join(__dirname + '/views'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
