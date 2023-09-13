@@ -12,7 +12,7 @@ mongoose
   .then(() => { console.log('connected to mongo: ', process.env.MONGODB_URI) })
 
 
-MIDDLEWARE
+// MIDDLEWARE
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
