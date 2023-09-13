@@ -17,7 +17,7 @@ mongoose
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
-console.log(process.pwd())
+console.log(process.cwd())
 console.log(__dirname)
 app.set('views', path.join(__dirname + '/views'))
 app.set('view engine', 'jsx')
