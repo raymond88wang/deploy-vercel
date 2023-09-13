@@ -8,7 +8,7 @@ const breadSeed = require('../seeds/bread_seed.js')
 // INDEX
 breads.get('/', async (req, res) => {
     const foundBakers = await Baker.find().lean()
-    const foundBreads = await Bread.find().limit(2).lean()
+    const foundBreads = await Bread.find().lean()
     res.render(
         'index',
         {
@@ -107,7 +107,7 @@ breads.get('/:id/edit', (req, res) => {
                     .populate("baker")
                     .then(bread => {
                         res.render(
-                            'Edit', 
+                            'edit', 
                             {
                                 bread: bread,
                                 bakers: foundBakers

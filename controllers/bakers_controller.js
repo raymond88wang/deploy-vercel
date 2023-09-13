@@ -24,7 +24,7 @@ bakers.get('/:id', (req, res) => {
         })
         .then(foundBaker => {
             res.render(
-                'BakerShow',
+                'bakerShow',
                 {
                     baker: foundBaker
                 })
