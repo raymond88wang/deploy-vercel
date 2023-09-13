@@ -7,9 +7,9 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
-mongoose
-  .connect("mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/")
-  .then(() => { console.log('connected to mongo: ', "mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/") })
+// mongoose
+//   .connect("mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/")
+//   .then(() => { console.log('connected to mongo: ', "mongodb+srv://raymond88wang:4Urz98fqlBdkvfie@cluster0.0fqrbfq.mongodb.net/") })
 
 
 // MIDDLEWARE
